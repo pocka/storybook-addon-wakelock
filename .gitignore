@@ -1,0 +1,17 @@
+# -- Do not put your environment specific files here. -- #
+
+# Dependencies
+node_modules
+
+# Log files
+*.log
+
+# tarball `npm pack` generates
+storybook-addon-wakelock.*.tgz
+
+# Cache directory Wireit generates
+.wireit
+
+# Transpiled files
+/cjs
+/esm
