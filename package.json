@@ -12,8 +12,10 @@
   "types": "esm/index.d.ts",
   "files": [
     "cjs/**/*.js",
+    "cjs/package.json",
     "esm/**/*.js",
-    "esm/**/*.d.ts"
+    "esm/**/*.d.ts",
+    "esm/package.json"
   ],
   "author": {
     "name": "Shota FUJI",
