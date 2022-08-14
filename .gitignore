@@ -13,5 +13,7 @@ storybook-addon-wakelock.*.tgz
 .wireit
 
 # Transpiled files
-/cjs
-/esm
+/cjs/**
+!/cjs/package.json
+/esm/**
+!/esm/package.json

@@ -71,7 +71,8 @@
         "tsconfig.json"
       ],
       "output": [
-        "esm/**"
+        "esm/**/*.(js|d.ts)",
+        "esm/tsconfig.tsbuildinfo"
       ]
     },
     "build:cjs": {
@@ -82,7 +83,8 @@
         "tsconfig.json"
       ],
       "output": [
-        "cjs/**"
+        "cjs/**/*.js",
+        "cjs/tsconfig.tsbuildinfo"
       ]
     }
   }
