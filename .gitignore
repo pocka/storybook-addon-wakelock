@@ -7,7 +7,7 @@ node_modules
 *.log
 
 # tarball `npm pack` generates
-storybook-addon-wakelock.*.tgz
+storybook-addon-wakelock-*.tgz
 
 # Cache directory Wireit generates
 .wireit
