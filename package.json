@@ -60,6 +60,7 @@
     "build:cjs": "wireit",
     "prepack": "npm run build",
     "fmt": "dprint fmt",
+    "typecheck": "tsc --noEmit",
     "test": "vitest"
   },
   "wireit": {
