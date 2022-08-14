@@ -47,7 +47,7 @@
     }
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
+    "dprint": "^0.30.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.7.4",
@@ -56,7 +56,9 @@
   "scripts": {
     "build": "wireit",
     "build:esm": "wireit",
-    "build:cjs": "wireit"
+    "build:cjs": "wireit",
+    "prepack": "npm run build",
+    "fmt": "dprint fmt"
   },
   "wireit": {
     "build": {
