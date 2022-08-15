@@ -5,5 +5,5 @@
     "outDir": "cjs",
     "declaration": false
   },
-  "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]
+  "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.stories.tsx"]
 }

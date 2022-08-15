@@ -17,3 +17,6 @@ storybook-addon-wakelock-*.tgz
 !/cjs/package.json
 /esm/**
 !/esm/package.json
+
+# Storybook builds
+/storybook-static
