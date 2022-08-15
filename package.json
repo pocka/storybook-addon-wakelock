@@ -74,15 +74,15 @@
       ]
     },
     "build:esm": {
-      "command": "tsc --build",
+      "command": "tsc --build tsconfig.esm.json",
       "clean": "if-file-deleted",
       "files": [
         "src/**/*.(ts|tsx)",
-        "tsconfig.json"
+        "tsconfig.esm.json"
       ],
       "output": [
         "esm/**/*.(js|d.ts)",
-        "esm/tsconfig.tsbuildinfo"
+        "esm/**/*.tsbuildinfo"
       ]
     },
     "build:cjs": {
@@ -90,11 +90,11 @@
       "clean": "if-file-deleted",
       "files": [
         "src/**/*.(ts|tsx)",
-        "tsconfig.json"
+        "tsconfig.cjs.json"
       ],
       "output": [
         "cjs/**/*.js",
-        "cjs/tsconfig.tsbuildinfo"
+        "cjs/**/*.tsbuildinfo"
       ]
     }
   }
