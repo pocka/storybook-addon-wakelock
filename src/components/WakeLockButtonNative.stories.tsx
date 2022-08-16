@@ -52,5 +52,18 @@ export const Locking = Template.bind({});
 Locking.args = {
   state: wakelock({
     type: "locking",
+    sentinel: {
+      released: false,
+      type: "screen",
+      async release() {
+        return undefined;
+      },
+      onrelease() {},
+      addEventListener() {},
+      removeEventListener() {},
+      dispatchEvent() {
+        return false;
+      },
+    },
   }),
 };

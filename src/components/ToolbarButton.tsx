@@ -1,9 +1,11 @@
 import type { VFC } from "react";
 
 import { TOOL_ID } from "../constants";
+import { useWakeLockApi } from "../hooks/useWakeLockApi";
 import { WakeLockButton } from "./WakeLockButton";
 
 export const ToolbarButton: VFC = () => {
-  // TODO: Implement a state hook
-  return <WakeLockButton state={{ type: "unavailable" }} buttonKey={TOOL_ID} />;
+  const bind = useWakeLockApi(navigator.wakeLock);
+
+  return <WakeLockButton {...bind} buttonKey={TOOL_ID} />;
 };

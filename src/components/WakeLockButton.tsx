@@ -70,7 +70,7 @@ function shouldActivateButton(state: State): boolean {
   }
 }
 
-interface WakeLockButtonProps {
+export interface WakeLockButtonProps {
   state: State;
 
   buttonKey?: string;

@@ -29,6 +29,8 @@ interface FailedToRequest {
  */
 interface Locking {
   type: "locking";
+
+  sentinel: WakeLockSentinel;
 }
 
 export type WakeLockState =
