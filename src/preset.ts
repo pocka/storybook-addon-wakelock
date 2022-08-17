@@ -7,10 +7,9 @@ const defaultOptions: PresetOptions = {
 };
 
 export function managerEntries(entries: unknown[] = [], options: Partial<PresetOptions>) {
-  const {}: PresetOptions = {
+  const { polyfill }: PresetOptions = {
     polyfill: options.polyfill ?? defaultOptions.polyfill,
   };
 
-  // TODO: Load manager entry with polyfill when `polyfill` option is active
-  return [...entries, require.resolve("../esm/manager")];
+  return [...entries, polyfill ? require.resolve("../esm/manager-polyfill") : require.resolve("../esm/manager")];
 }

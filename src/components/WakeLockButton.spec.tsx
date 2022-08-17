@@ -57,3 +57,13 @@ describe("WakeLockAvailable", () => {
     });
   });
 });
+
+describe("PolyfillAvailable", () => {
+  describe("LoadingModule", () => {
+    it("Should disable the button", () => {
+      const { getByRole } = renderButton({ type: "polyfill_available", state: { type: "loading_module" } });
+
+      expect(getByRole("button").hasAttribute("disabled")).toBe(true);
+    });
+  });
+});

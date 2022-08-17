@@ -40,7 +40,7 @@ export function useWakeLockApi(wakeLock: WakeLock): Required<Pick<WakeLockButton
   }, [state]);
 
   const onClick = useCallback(async () => {
-    if (state.type === "unavailable") {
+    if (state.type !== "wakelock_available") {
       return;
     }
 

@@ -1,3 +1,4 @@
+import type { PolyfillState } from "./PolyfillState";
 import type { WakeLockState } from "./WakeLockState";
 
 /**
@@ -17,6 +18,17 @@ interface WakeLockAvailable {
   state: WakeLockState;
 }
 
+/**
+ * The platform (browser) does not support WakeLock API but polyfill is
+ * available.
+ */
+interface PolyfillAvailable {
+  type: "polyfill_available";
+
+  state: PolyfillState;
+}
+
 export type State =
   | Unavailable
-  | WakeLockAvailable;
+  | WakeLockAvailable
+  | PolyfillAvailable;

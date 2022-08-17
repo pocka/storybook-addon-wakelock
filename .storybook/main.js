@@ -2,5 +2,10 @@ module.exports = {
   stories: [
     "../src/**/*.stories.tsx",
   ],
-  addons: ["../preset.js", "@storybook/addon-essentials"],
+  addons: [{
+    name: "../preset.js",
+    options: {
+      polyfill: true,
+    },
+  }, "@storybook/addon-essentials"],
 };

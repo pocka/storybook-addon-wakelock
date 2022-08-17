@@ -18,6 +18,15 @@ function getIconName(state: State): IconKey {
           return "unlock";
       }
     }
+
+    case "polyfill_available": {
+      switch (state.state.type) {
+        case "locking":
+          return "lock";
+        default:
+          return "unlock";
+      }
+    }
   }
 }
 
@@ -28,6 +37,14 @@ function shouldDisableButton(state: State): boolean {
     case "wakelock_available": {
       switch (state.state.type) {
         case "requesting":
+          return true;
+        default:
+          return false;
+      }
+    }
+    case "polyfill_available": {
+      switch (state.state.type) {
+        case "loading_module":
           return true;
         default:
           return false;
@@ -52,6 +69,20 @@ function getButtonTitle(state: State): string {
           return "Requesting screen lock using WakeLock API";
       }
     }
+    case "polyfill_available": {
+      switch (state.state.type) {
+        case "failed_to_load_module":
+          return `Failed to load polyfill module (Press again to retry): ${state.state.reason.message}`;
+        case "failed_to_lock":
+          return `Failed to lock the screen (Press again to retry): ${state.state.reason.message}`;
+        case "idle":
+          return "Lock screen using a polyfill module";
+        case "loading_module":
+          return "Loading WakeLock API polyfill module";
+        case "locking":
+          return "Release screen lock";
+      }
+    }
   }
 }
 
@@ -66,6 +97,9 @@ function shouldActivateButton(state: State): boolean {
         default:
           return false;
       }
+    }
+    case "polyfill_available": {
+      return state.state.type === "locking";
     }
   }
 }
