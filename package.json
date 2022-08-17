@@ -89,6 +89,7 @@
       "clean": "if-file-deleted",
       "files": [
         "src/**/*.(ts|tsx)",
+        "!src/preset.ts",
         "tsconfig.esm.json"
       ],
       "output": [
@@ -100,7 +101,7 @@
       "command": "tsc --build tsconfig.cjs.json",
       "clean": "if-file-deleted",
       "files": [
-        "src/**/*.(ts|tsx)",
+        "src/preset.ts",
         "tsconfig.cjs.json"
       ],
       "output": [

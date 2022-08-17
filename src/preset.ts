@@ -12,5 +12,5 @@ export function managerEntries(entries: unknown[] = [], options: Partial<PresetO
   };
 
   // TODO: Load manager entry with polyfill when `polyfill` option is active
-  return [...entries, require.resolve("./manager")];
+  return [...entries, require.resolve("../esm/manager")];
 }
