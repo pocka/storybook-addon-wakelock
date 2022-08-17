@@ -1,6 +1,6 @@
 import { IconButton, Icons } from "@storybook/components";
 import type { IconKey } from "@storybook/components";
-import type { VFC } from "react";
+import type { FC } from "react";
 
 import type { State } from "../types/State";
 
@@ -78,7 +78,7 @@ export interface WakeLockButtonProps {
   onClick?(): void;
 }
 
-export const WakeLockButton: VFC<WakeLockButtonProps> = ({ buttonKey, state, onClick }) => {
+export const WakeLockButton: FC<WakeLockButtonProps> = ({ buttonKey, state, onClick }) => {
   return (
     <IconButton
       key={buttonKey}
