@@ -4,7 +4,11 @@ Storybook Addon that adds a toolbar button to activate/deactivate WakeLock (scre
 
 ## Install
 
-WIP.
+This addon is compatible with Storybook v6.5.x.
+
+```sh
+$ npm i -D storybook-addon-wakelock
+```
 
 ## Usage
 
