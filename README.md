@@ -1,5 +1,9 @@
 # storybook-addon-wakelock
 
+[![npm](https://img.shields.io/npm/v/storybook-addon-wakelock)](https://www.npmjs.com/package/storybook-addon-wakelock)
+[![GitHub](https://img.shields.io/github/license/pocka/storybook-addon-wakelock)](https://github.com/pocka/storybook-addon-wakelock/blob/master/LICENSE)
+[![code style: dprint](https://img.shields.io/badge/code_style-dprint-4d5564)](https://github.com/dprint/dprint)
+
 Storybook Addon that adds a toolbar button to activate/deactivate WakeLock (screen lock).
 
 ## Install
