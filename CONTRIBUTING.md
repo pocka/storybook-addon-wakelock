@@ -45,3 +45,17 @@ This setups these git hooks:
 - (commit-msg) Validate the commit message against conventional commit rules
 
 See the contents of each files to see what will be executed.
+
+## Release guide
+
+1. Run `git switch master`
+1. Make sure the working directory is clean (`git status` displays no files)
+1. Run `git pull --prune`
+1. Update `CHANGELOG.md`
+1. Stage `CHANGELOG.md` (`git add CHANGELOG.md`)
+1. Run `npm version -f <new version>`
+1. Push `master` branch
+1. Push the generated tag
+1. (CI publish the package automatically)
+
+If the last step failed, run `npm publish` manually.
