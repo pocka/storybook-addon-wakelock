@@ -6,7 +6,7 @@
     "noUnusedLocals": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "moduleResolution": "node",
     "module": "ES2020",
     "outDir": "esm",

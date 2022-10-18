@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import * as React from "react";
 
 import { TOOL_ID } from "../constants.js";
 import { useWakeLockApi } from "../hooks/useWakeLockApi.js";

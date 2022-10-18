@@ -1,4 +1,5 @@
 import { addons, types } from "@storybook/addons";
+import * as React from "react";
 
 import { ToolbarButton } from "./components/ToolbarButton.js";
 import { ADDON_ID, TOOL_ID } from "./constants.js";

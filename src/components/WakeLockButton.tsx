@@ -1,6 +1,7 @@
 import { IconButton, Icons } from "@storybook/components";
 import type { IconKey } from "@storybook/components";
 import type { FC } from "react";
+import * as React from "react";
 
 import type { State } from "../types/State";
 

@@ -1,5 +1,6 @@
 import { convert, ThemeProvider, themes } from "@storybook/theming";
 import { cleanup, render } from "@testing-library/react";
+import * as React from "react";
 import { afterEach, describe, expect, it } from "vitest";
 
 import type { State } from "../types/State";
