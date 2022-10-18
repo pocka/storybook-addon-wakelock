@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-wakelock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Storybook Addon enables you to activate WakeLock API through toolbar",
   "keywords": [
     "storybook-addons",
