@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2022-10-18
+
+### Fixed
+
+- Fixed `Can't resolve 'react/jsx-runtime'` error occurs in React v16 project.
+
 ## [0.1.1] - 2022-10-18
 
 ### Fixed
@@ -19,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial implementation.
 
-[Unreleased]: https://github.com/pocka/storybook-addon-wakelock/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/pocka/storybook-addon-wakelock/compare/v0.1.2...HEAD
 [0.1.0]: https://github.com/pocka/storybook-addon-wakelock/releases/tag/v0.1.0
 [0.1.1]: https://github.com/pocka/storybook-addon-wakelock/compare/v0.1.0...v0.1.1
+[0.1.1]: https://github.com/pocka/storybook-addon-wakelock/compare/v0.1.1...v0.1.2
