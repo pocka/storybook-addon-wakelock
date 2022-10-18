@@ -4,7 +4,7 @@ import type NoSleep from "nosleep.js";
 import type { PolyfillState } from "../types/PolyfillState";
 import type { State } from "../types/State";
 
-import { WakeLockButton } from "./WakeLockButton";
+import { WakeLockButton } from "./WakeLockButton.js";
 
 // Helper function
 function polyfill(state: PolyfillState): State {

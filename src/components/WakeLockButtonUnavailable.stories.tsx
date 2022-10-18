@@ -2,7 +2,7 @@ import type { Meta, Story } from "@storybook/react";
 
 import type { State } from "../types/State";
 
-import { WakeLockButton } from "./WakeLockButton";
+import { WakeLockButton } from "./WakeLockButton.js";
 
 interface Args {
   state: State;

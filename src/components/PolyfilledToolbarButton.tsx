@@ -1,9 +1,9 @@
 import type { FC } from "react";
 
-import { TOOL_ID } from "../constants";
-import { usePolyfill } from "../hooks/usePolyfill";
-import { useWakeLockApi } from "../hooks/useWakeLockApi";
-import { WakeLockButton } from "./WakeLockButton";
+import { TOOL_ID } from "../constants.js";
+import { usePolyfill } from "../hooks/usePolyfill.js";
+import { useWakeLockApi } from "../hooks/useWakeLockApi.js";
+import { WakeLockButton } from "./WakeLockButton.js";
 
 export const ToolbarButton: FC = () => {
   return "wakeLock" in navigator ? <Native /> : <Polyfill />;

@@ -3,7 +3,7 @@ import type { Meta, Story } from "@storybook/react";
 import type { State } from "../types/State";
 import type { WakeLockState } from "../types/WakeLockState";
 
-import { WakeLockButton } from "./WakeLockButton";
+import { WakeLockButton } from "./WakeLockButton.js";
 
 // Helper function
 function wakelock(state: WakeLockState): State {

@@ -1,8 +1,8 @@
 import { act, renderHook } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import { State } from "../types/State";
-import { useWakeLockApi } from "./useWakeLockApi";
+import type { State } from "../types/State";
+import { useWakeLockApi } from "./useWakeLockApi.js";
 
 function mockedWakeLockSentinel(override: Partial<WakeLockSentinel> = {}): WakeLockSentinel {
   return {

@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it } from "vitest";
 
 import type { State } from "../types/State";
 
-import { WakeLockButton } from "./WakeLockButton";
+import { WakeLockButton } from "./WakeLockButton.js";
 
 function renderButton(state: State) {
   return render(

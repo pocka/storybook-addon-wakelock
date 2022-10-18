@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 import type { PolyfillState } from "../types/PolyfillState";
 import type { State } from "../types/State";
-import { usePolyfill } from "./usePolyfill";
+import { usePolyfill } from "./usePolyfill.js";
 
 // Helper function
 function polyfill(state: PolyfillState): State {

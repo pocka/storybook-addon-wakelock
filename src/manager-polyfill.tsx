@@ -1,7 +1,7 @@
 import { addons, types } from "@storybook/addons";
 
-import { ToolbarButton } from "./components/PolyfilledToolbarButton";
-import { ADDON_ID, TOOL_ID } from "./constants";
+import { ToolbarButton } from "./components/PolyfilledToolbarButton.js";
+import { ADDON_ID, TOOL_ID } from "./constants.js";
 
 addons.register(ADDON_ID, () => {
   addons.add(TOOL_ID, {
