@@ -115,6 +115,7 @@ export interface WakeLockButtonProps {
 
 export const WakeLockButton: FC<WakeLockButtonProps> = ({ buttonKey, state, onClick }) => {
   return (
+    // @ts-expect-error: Newer version of @storybook/components introduced a broken typing
     <IconButton
       key={buttonKey}
       title={getButtonTitle(state)}
