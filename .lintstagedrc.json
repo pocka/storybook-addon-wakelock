@@ -1,3 +1,3 @@
 {
-  "*.{ts,tsx,js,jsx,json,md}": "dprint fmt"
+  "*.{ts,tsx,js,jsx,json,md}": "dprint fmt --allow-no-files"
 }
