@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import type NoSleep from "nosleep.js";
 import * as React from "react";
 
@@ -31,44 +31,52 @@ export default {
   argTypes: {
     state: { control: false },
   },
+  render({ state }) {
+    return <WakeLockButton state={state} />;
+  },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ state }) => <WakeLockButton state={state} />;
+type Story = StoryObj<Args>;
 
-export const LoadingModule = Template.bind({});
-LoadingModule.args = {
-  state: polyfill({ type: "loading_module" }),
+export const LoadingModule: Story = {
+  args: {
+    state: polyfill({ type: "loading_module" }),
+  },
 };
 
-export const FailedToLoadModule = Template.bind({});
-FailedToLoadModule.args = {
-  state: polyfill({
-    type: "failed_to_load_module",
-    reason: new Error("Sample Error"),
-  }),
+export const FailedToLoadModule: Story = {
+  args: {
+    state: polyfill({
+      type: "failed_to_load_module",
+      reason: new Error("Sample Error"),
+    }),
+  },
 };
 
-export const Idle = Template.bind({});
-Idle.args = {
-  state: polyfill({
-    type: "idle",
-    nosleep,
-  }),
+export const Idle: Story = {
+  args: {
+    state: polyfill({
+      type: "idle",
+      nosleep,
+    }),
+  },
 };
 
-export const FailedToLock = Template.bind({});
-FailedToLock.args = {
-  state: polyfill({
-    type: "failed_to_lock",
-    nosleep,
-    reason: new Error("Sample Error"),
-  }),
+export const FailedToLock: Story = {
+  args: {
+    state: polyfill({
+      type: "failed_to_lock",
+      nosleep,
+      reason: new Error("Sample Error"),
+    }),
+  },
 };
 
-export const Locking = Template.bind({});
-Locking.args = {
-  state: polyfill({
-    type: "locking",
-    nosleep,
-  }),
+export const Locking: Story = {
+  args: {
+    state: polyfill({
+      type: "locking",
+      nosleep,
+    }),
+  },
 };

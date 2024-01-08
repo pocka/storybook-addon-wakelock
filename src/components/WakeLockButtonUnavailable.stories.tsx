@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import * as React from "react";
 
 import type { State } from "../types/State";
@@ -14,13 +14,17 @@ export default {
   argTypes: {
     state: { control: false },
   },
+  render({ state }) {
+    return <WakeLockButton state={state} />;
+  },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ state }) => <WakeLockButton state={state} />;
+type Story = StoryObj<Args>;
 
-export const Unavailable = Template.bind({});
-Unavailable.args = {
-  state: {
-    type: "unavailable",
+export const Unavailable: Story = {
+  args: {
+    state: {
+      type: "unavailable",
+    },
   },
 };

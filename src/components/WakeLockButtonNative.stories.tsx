@@ -1,4 +1,4 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import * as React from "react";
 
 import type { State } from "../types/State";
@@ -23,48 +23,55 @@ export default {
   argTypes: {
     state: { control: false },
   },
+  render({ state }) {
+    return <WakeLockButton state={state} />;
+  },
 } as Meta<Args>;
 
-const Template: Story<Args> = ({ state }) => <WakeLockButton state={state} />;
+type Story = StoryObj<Args>;
 
-export const Idle = Template.bind({});
-Idle.args = {
-  state: wakelock({
-    type: "idle",
-  }),
+export const Idle: Story = {
+  args: {
+    state: wakelock({
+      type: "idle",
+    }),
+  },
 };
 
-export const Requesting = Template.bind({});
-Requesting.args = {
-  state: wakelock({
-    type: "requesting",
-  }),
+export const Requesting: Story = {
+  args: {
+    state: wakelock({
+      type: "requesting",
+    }),
+  },
 };
 
-export const FailedToRequest = Template.bind({});
-FailedToRequest.args = {
-  state: wakelock({
-    type: "failed_to_request",
-    reason: new Error("Sample Error"),
-  }),
+export const FailedToRequest: Story = {
+  args: {
+    state: wakelock({
+      type: "failed_to_request",
+      reason: new Error("Sample Error"),
+    }),
+  },
 };
 
-export const Locking = Template.bind({});
-Locking.args = {
-  state: wakelock({
-    type: "locking",
-    sentinel: {
-      released: false,
-      type: "screen",
-      async release() {
-        return undefined;
+export const Locking: Story = {
+  args: {
+    state: wakelock({
+      type: "locking",
+      sentinel: {
+        released: false,
+        type: "screen",
+        async release() {
+          return undefined;
+        },
+        onrelease() {},
+        addEventListener() {},
+        removeEventListener() {},
+        dispatchEvent() {
+          return false;
+        },
       },
-      onrelease() {},
-      addEventListener() {},
-      removeEventListener() {},
-      dispatchEvent() {
-        return false;
-      },
-    },
-  }),
+    }),
+  },
 };
